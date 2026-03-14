@@ -1,0 +1,21 @@
+project_name: thesis_mean_teacher_3d
+model: unet_3d
+dataset:
+  root_path: ./data/BraTS2019
+  train_split: train.txt
+  val_split: val.txt
+training:
+  max_iterations: 30000
+  batch_size: 4
+  labeled_batch_size: 2
+  labeled_num: 25
+  patch_size: [96, 96, 96]
+optimizer:
+  type: sgd
+  base_lr: 0.01
+  momentum: 0.9
+  weight_decay: 0.0001
+mean_teacher:
+  ema_decay: 0.99
+  consistency: 0.1
+  consistency_rampup: 200.0

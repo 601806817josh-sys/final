@@ -1,0 +1,10 @@
+torch
+torchvision
+numpy
+h5py
+tensorboardX
+tqdm
+medpy
+SimpleITK
+nibabel
+PyYAML

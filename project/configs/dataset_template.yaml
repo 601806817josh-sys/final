@@ -1,0 +1,8 @@
+dataset_name: BraTS2019_preprocessed
+expected_structure:
+  - data/<case_id>.h5
+  - train.txt
+  - val.txt
+h5_keys:
+  image: 3D CT volume
+  label: 3D segmentation mask
